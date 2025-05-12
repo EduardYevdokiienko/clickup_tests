@@ -43,3 +43,4 @@ dmypy.json
 
 # Mac system files
 .DS_Store
+allure-results
