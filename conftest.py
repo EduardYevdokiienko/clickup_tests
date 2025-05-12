@@ -9,6 +9,7 @@ def auth_session():
     auth_api = AuthApi()
     return auth_api.get_session()
 
+
 @pytest.fixture(scope="session")
 def new_task_dy_id(auth_session, clickup_ids, task_api_endpoints):
     list_id = clickup_ids["list_id"]
@@ -24,6 +25,7 @@ def new_task_dy_id(auth_session, clickup_ids, task_api_endpoints):
 def get_ids(auth_session):
     return GetIds(auth_session)
 
+
 @pytest.fixture(scope="session")
 def clickup_ids(get_ids):
     team_id = get_ids.get_team_id()
@@ -37,6 +39,7 @@ def clickup_ids(get_ids):
         "folder_id": folder_id,
         "list_id": list_id
     }
+
 
 @pytest.fixture(scope='session')
 def task_api_endpoints(auth_session):
