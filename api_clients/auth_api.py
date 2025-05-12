@@ -6,7 +6,6 @@ from api_clients.base_api import BaseApi
 
 class AuthApi(BaseApi):
 
-
     @allure.step("Initialize AuthApi and create session")
     def __init__(self):
         self.headers = HEADERS

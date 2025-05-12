@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 def get_env_variable(name):
     value = os.getenv(name)
     if not value:
